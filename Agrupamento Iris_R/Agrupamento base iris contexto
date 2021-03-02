@@ -1,0 +1,60 @@
+____________Análise de Agrupamentos_________________
+É considerado um método de machine learning, não supervisionado, 
+pois não há uma varável resposta
+
+
+Objetivo: Dividir elementos em grupos, de forma que os elementos do mesmo grupo,
+sejam similares e diferentes de elementos de outros grupos.
+
+
+-> Casos
+- agrupar produtos do mercado com o mesmo posicionamento
+- segmentar os clientes de acordo com o perfil de consumo
+- classificar cidades de acordo com as características populacionais
+
+
+-> Como fazer para agrupar os elementos?
+  
+-Precisamos de medidas de similaridade ou dissimilaridade
+
+- variáveis quantitativas -> medidas de dissimilaridade (ex: distâncias - euclidiana)
+- variáveis qualitativas -> medidas de similaridade (ex: coeficiente de concordância simples)
+
+dissimilaridade = 1 - similaridade
+
+
+
+Técnicas Hierárquicas
+->Nº de grupos é definido depois da nossa análise
+-aglomerativas (começa com n grupos) ou divisivas (começa com 1 grupo)
+
+Dendograma: é um método visual para definir o nº de grupos a serem criados
+
+
+
+Métodos de ligação -> critério para juntar os grupos
+Ligação Simples
+ligação completa
+Média das distâncias
+Centroide
+Ward
+
+___________________________________________________
+
+Técnicas Não-hierárquicas
+- O nº de grupos é definido previamente
+
+
+Kmeans:é um método que classifica objetos dentro de multiplos grupos, de forma que a variação
+dentro dos grupos seja minimizada pela soma dos quadrados das distâncias euclidianas entre
+os itens e seus centroides
+
+- >Kmeans <- 
+k= nº de grupos
+1- É gerado K centróides aleatórios
+2- Atribuição do cluster (cada elemento vai pertencer ao grupo do centroide mais próximo)
+3- Movimentação dos centróides (centróides não fixos) 1º os centroides são aleatórios e depois passam a ser o ponto médio dos grupos
+4- Otimização (repetição do passo 2 e 3 até os clusters se tornarem estáveis)
+
+
+
